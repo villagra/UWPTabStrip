@@ -1,10 +1,10 @@
 # UWPTabStrip
-Tabstrip control for UWP app with some composition goodies
+Tabstrip control for UWP with some composition goodies
 
 ![](insta.gif)
 
 # Usage
-Take a look at the Mainpage.xaml for an usage example
+Take a look at the page **MainPage.xaml** for an usage example
 
 # Contribute
 We would love for you to contribute to UWPTabStrip, check the LICENSE file for more info. Feel free to submit any issues or PRs. ❤️
