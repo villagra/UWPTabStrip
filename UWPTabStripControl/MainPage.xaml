@@ -8,26 +8,51 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.Resources>
+        <Style x:Key="CustomLeftButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="Segoe MDL2 Assets" />
+            <Setter Property="Content" Value="" />
+            <Setter Property="RequestedTheme" Value="Dark" />
+            <Setter Property="Width" Value="28" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Padding" Value="0 6" />
+            <Setter Property="RequestedTheme" Value="Light" />
+            <Setter Property="Foreground" Value="#FF4D4D" />
+        </Style>
+        <Style x:Key="CustomRightButtonStyle" TargetType="Button" BasedOn="{StaticResource CustomLeftButtonStyle}">
+            <Setter Property="Content" Value="" />
+        </Style>
+    </Page.Resources>
+
     <Grid Background="Black">
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" >
-            <c:TabStrip 
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <c:TabStrip 
                 x:Name="tabStrip1"
                 HorizontalAlignment="Center"
                 Height="48" 
                 Foreground="White"                     
-                IndicatorColor="Red" />
+                IndicatorColor="#0085B2" />
 
-            <Grid Width="400" Background="#343434" Margin="0 20" Padding="0 20">
-                <c:TabStrip 
-                    x:Name="tabStrip2"
-                    HorizontalAlignment="Center"
-                    Height="48" 
-                    Foreground="Yellow"                     
-                    IndicatorColor="Blue" />
-            </Grid>
+        <Grid Grid.Row="1" Background="White">
+            <c:TabStrip 
+                x:Name="tabStrip2"
+                HorizontalAlignment="Center"
+                FontSize="20"                    
+                Height="48" 
+                FontWeight="SemiBold"
+                LeftButtonStyle="{StaticResource CustomLeftButtonStyle}"
+                RightButtonStyle="{StaticResource CustomRightButtonStyle}"
+                Foreground="Black"                     
+                IndicatorColor="#FF4D4D" FontFamily="Segoe UI Black" />
+        </Grid>
 
-            <TextBlock x:Name="txtSelectedItem" Margin="0 40 0 0" Foreground="White" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center" />
-
-        </StackPanel>
+        <Grid Grid.Row="2" Background="#212121">
+            <TextBlock x:Name="txtSelectedItem" VerticalAlignment="Center" Foreground="White" FontSize="20" HorizontalAlignment="Center" TextAlignment="Center" />
+        </Grid>
     </Grid>
 </Page>

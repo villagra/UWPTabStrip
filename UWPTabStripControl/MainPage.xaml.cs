@@ -26,12 +26,13 @@ namespace UWPTabStripControl
         {
             this.InitializeComponent();
             List<string> items1 = new List<string>();
-            items1.Add("Option 1");
-            items1.Add("Option 2");
-            items1.Add("Option 3");
-            items1.Add("Option 4");
-            items1.Add("Option 5");
-            items1.Add("Option 6");
+            items1.Add("Blue");
+            items1.Add("Red");
+            items1.Add("Yellow");
+            items1.Add("Orange");
+            items1.Add("Purple");
+            items1.Add("Black");
+            items1.Add("White");
 
             tabStrip1.Items = items1;
             tabStrip1.SelectionChanged += TabStrip_SelectionChanged;
